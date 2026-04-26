@@ -124,6 +124,8 @@ class OAWeather(Converter, object):
 						return self.source.getPrecipitation(self.index)
 					elif self.mode == "precipitationfull":
 						return self.source.getPrecipitation(self.index, True)
+					elif self.mode == "umbrellaindex":
+						return self.source.getUmbrellaIndex(self.index)
 					else:
 						return self.source.getKeyforDay(self.mode, self.index, "")
 				if self.mode == "weathersource":
@@ -193,7 +195,7 @@ class OAWeather(Converter, object):
 				else:
 					return self.source.getVal(self.mode)
 			except Exception as err:
-				print("[OAWeather] Converter Error:%s" % str(err))
+				print("[OAWeather] Converter Error: %s" % str(err))
 				print_exc()
 		return ""
 

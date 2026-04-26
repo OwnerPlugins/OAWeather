@@ -270,6 +270,9 @@ class OAWeather(Source):
 		text = "%s " % self.precipitationtext if full else ""
 		return "%s%s %s" % (text, self.getKeyforDay("precipitation", day), self.getVal("precunit"))
 
+	def getUmbrellaIndex(self, day: int):
+		return self.getKeyforDay("umbrellaIndex", day, "")
+
 	def getYahooCode(self, day: int):
 		iconcode = self.getKeyforDay("yahooCode", day, "")
 		nightSwitch = day == 0 and config.plugins.OAWeather.nighticons.value and self.getIsNight()
