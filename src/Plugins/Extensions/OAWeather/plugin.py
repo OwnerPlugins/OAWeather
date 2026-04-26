@@ -251,7 +251,7 @@ class WeatherHandler():
 					cache_data = load(fd)
 				self.writeData(cache_data)
 				return
-		self.refreshTimer.start(3000, True)
+		self.refreshTimer.start(5000, True)
 
 	def getCurrLocation(self):
 		return self.currLocation
