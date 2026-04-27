@@ -79,6 +79,7 @@ weekshortday           # Example: "Fri"
 date                   # Example: "2023-01-13"
 precipitation          # Example: "29 %"
 precipitationfull      # Example: "Precipitation 29 %"
+umbrellaIndex          # Example: "It’s going to rain over the next two hours, so do bring your umbrella"
 daySummary0            # Example: "The skies will be cloudy." (HINT: MSN only, for other services an empty string is supplied)
 daySummary1            # Example: "Blustery winds will accompany a high of 6°." (HINT: MSN only, for other services an empty string is supplied)
 nightSummary0          # Example: "The skies will be mostly clear." (HINT: MSN only, for other services an empty string is supplied)
@@ -209,8 +210,8 @@ Displaying weather service logo icon with OAWeatherPixmap Renderer:
 		<widget render="Label"  source="session.OAWeather"  noWrap="1">
 			<convert type="OAWeather">temperature_high_low,day5</convert>
 		</widget>
-	
-usage example 4:
+
+usage example 2:
 conditional display of pixmap (here: depending on flag 'isnight')
 <widget position="0,0" size="480,320" render="Pixmap" pixmap="/usr/share/enigma2/display/NightWeather_Standby_stein17/standby_night.png" source="session.OAWeather"  zPosition="0" halign="center" valign="center">
 	<convert type="OAWeather">isnight</convert>
